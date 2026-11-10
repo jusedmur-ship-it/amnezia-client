@@ -71,6 +71,15 @@ if(NOT ANDROID)
         test_common
     )
 
+    add_executable(test_key_table
+        testKeyTable.cpp
+    )
+
+    target_link_libraries(test_key_table PRIVATE
+        Qt6::Test
+        test_common
+    )
+
     add_executable(test_server_edit
         testServerEdit.cpp
     )
@@ -469,6 +478,7 @@ enable_testing()
 
 if(NOT ANDROID)
     add_test(NAME MultipleImportsTest              COMMAND test_multiple_imports)
+    add_test(NAME KeyTableTest                     COMMAND test_key_table)
     add_test(NAME ServerEditTest                   COMMAND test_server_edit)
     add_test(NAME DefaultServerChangeTest          COMMAND test_default_server_change)
     add_test(NAME ServerEdgeCasesTest              COMMAND test_server_edge_cases)

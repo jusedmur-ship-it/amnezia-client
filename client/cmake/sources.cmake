@@ -43,6 +43,7 @@ set(HEADERS ${HEADERS}
     ${CLIENT_ROOT_DIR}/core/controllers/allowedDnsController.h
     ${CLIENT_ROOT_DIR}/core/controllers/selfhosted/exportController.h
     ${CLIENT_ROOT_DIR}/core/controllers/connectionController.h
+    ${CLIENT_ROOT_DIR}/core/controllers/keyTableController.h
     ${CLIENT_ROOT_DIR}/core/controllers/settingsController.h
     ${CLIENT_ROOT_DIR}/core/controllers/localProxyController.h
     ${CLIENT_ROOT_DIR}/core/controllers/logsController.h
@@ -133,6 +134,7 @@ set(SOURCES ${SOURCES}
     ${CLIENT_ROOT_DIR}/core/controllers/allowedDnsController.cpp
     ${CLIENT_ROOT_DIR}/core/controllers/selfhosted/exportController.cpp
     ${CLIENT_ROOT_DIR}/core/controllers/connectionController.cpp
+    ${CLIENT_ROOT_DIR}/core/controllers/keyTableController.cpp
     ${CLIENT_ROOT_DIR}/core/controllers/settingsController.cpp
     ${CLIENT_ROOT_DIR}/core/controllers/localProxyController.cpp
     ${CLIENT_ROOT_DIR}/core/controllers/logsController.cpp

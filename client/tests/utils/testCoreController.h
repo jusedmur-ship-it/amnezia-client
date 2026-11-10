@@ -43,6 +43,7 @@ public:
         , m_apiCountryModel(apiCountryModelProtected())
         , m_apiCountryListModel(apiCountryListModelProtected())
         , m_apiConfigsCountryListModel(apiConfigsCountryListModelProtected())
+        , m_keyTableController(keyTableControllerProtected())
     {
     }
 
@@ -79,6 +80,7 @@ public:
     ApiCountryModel *m_apiCountryModel;
     ApiCountryListModel *m_apiCountryListModel;
     ApiCountryListModel *m_apiConfigsCountryListModel;
+    KeyTableController *m_keyTableController;
 };
 
 #endif // TESTCORECONTROLLER_H

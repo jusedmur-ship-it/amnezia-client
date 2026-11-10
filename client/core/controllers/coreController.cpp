@@ -40,6 +40,7 @@ CoreController::CoreController(const QSharedPointer<VpnConnection> &vpnConnectio
     if (!skipPlatformControllerInit) {
         initAndroidController();
         initAppleController();
+        m_keyTableController->start();
     }
     initLogging();
 
@@ -186,6 +187,9 @@ void CoreController::initControllers()
 {
     m_connectionUiController = new ConnectionUiController(m_connectionController, m_serversController, this);
     setQmlContextProperty("ConnectionController", m_connectionUiController);
+
+    m_keyTableController = new KeyTableController(m_serversRepository, m_importCoreController, m_connectionController,
+                                                  m_connectionUiController, this);
 
     if (m_engine) {
         m_focusController = new FocusController(m_engine, this);

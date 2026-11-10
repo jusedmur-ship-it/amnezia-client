@@ -47,6 +47,7 @@
 #include "core/controllers/settingsController.h"
 #include "core/controllers/localProxyController.h"
 #include "core/controllers/connectionController.h"
+#include "core/controllers/keyTableController.h"
 #include "core/controllers/updateController.h"
 
 #include "core/repositories/secureServersRepository.h"
@@ -146,6 +147,7 @@ protected:
     ApiCountryModel* apiCountryModelProtected() const { return m_apiCountryModel; }
     ApiCountryListModel* apiCountryListModelProtected() const { return m_apiCountryListModel; }
     ApiCountryListModel* apiConfigsCountryListModelProtected() const { return m_apiConfigsCountryListModel; }
+    KeyTableController* keyTableControllerProtected() const { return m_keyTableController; }
 
 private:
     void initRepositories();
@@ -209,6 +211,7 @@ private:
     InstallController* m_installController;
     ExportController* m_exportController;
     ConnectionController* m_connectionController;
+    KeyTableController* m_keyTableController;
     SettingsController* m_settingsController;
     LocalProxyController* m_localProxyController;
 
